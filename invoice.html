@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>invoice</title>
+	<style>
+		.invoice
+		{
+			height: auto;
+			width: 60%;
+			/*background-color: red;*/
+			margin: 0 0 0 20%;
+			/*display: flex;*/
+			background-color: #eee;
+		}
+		.in-logo-add-container
+		{
+			height: 230px;
+			width: 100%;
+			/*background-color: #eee;*/
+			/*display: flex;*/
+		}
+		.in-logo-name
+		{
+			height: 120px;
+			width: 100%;
+			background-color: #216ed0;
+			display: flex;
+			color: white;
+		}
+		
+		.in-logo-name-img
+		{
+			height: 60px;
+			width: 8%;
+			/*background-color: #eee;*/
+			margin: 20px 0 0 8%;
+		}
+		.in-logo-name-img img
+		{
+			height: 60px;
+			width: 100%;
+		}
+		.in-logo-name-name 
+		{
+			height: 80px;
+			/*width: 10%;*/
+			font-size: 27px;
+			font-weight: bold;
+			line-height: 80px;
+			font-family: Curlz MT;
+			margin: 10px 0 0 0;
+		}
+		.in-invoice
+		{
+			height: 80px;
+			line-height: 80px;
+			margin: 20px 0 0 45%;
+			font-size: 40px;
+		}
+		.in-tag-line
+		{
+			height: 20px;
+			width: 30%;
+			position: absolute;
+			margin: 85px 0 0 0;
+			font-weight: bold;
+			text-indent: 20px;
+		}
+		.in-add
+		{
+			height: 100px;
+			width: 100%;
+			background-color: #216ed0;
+			margin: 7px 0 0 0;
+			display: flex;
+			color: white;
+		}
+		.in-address-store
+		{
+			height:100px; 
+			width: 20%;
+			background-color: #216ed0;
+			/*font-family: sans-serif;*/
+			font-weight: bold;
+			margin: 0 0 0 5%;
+		}
+		.in-add-date
+		{
+			height: 100px;
+			width: 20%;
+			background-color: #216ed0;
+			margin: 0 0 0 55%;
+			font-weight: bold;
+		}
+		.in-add-date input
+		{
+			margin: 10px 0 0 0;
+		}
+		.bill
+		{
+			height: 210px;
+			display: block;
+			background-color: #eee;
+			width: 100%;
+			margin: 30px 0 0 0;
+		}
+		.bill-header
+		{
+			height: 40px;
+			width: 100%;
+			background-color: white;
+			font-weight: bold;
+			text-indent: 10px;
+			border-bottom: 2px solid #216ed0;
+			font-size: 20px;
+			line-height: 40px;
+		}
+		.bill input
+		{
+			width: 100%;
+			border-style: none;
+			height: 30px;
+			font-size: 15px;
+			text-indent: 10px;
+			margin: 5px 0 0 0;
+		}
+		
+		table
+		{
+			margin: 10px 0 0 0;
+			background-color: #eee;
+			border-bottom: 2px solid #216ed0;
+
+			width: 100%;
+		}
+
+		th
+		{
+			padding: 10px;
+			background-color: white;
+			border-bottom: 2px solid #216ed0;
+			
+		}
+		td
+		{
+			text-align: center;
+			background-color: white;
+
+		}
+		tr
+		{
+			border-bottom: 2px solid #216ed0;
+		}
+		.in-total
+		{
+			height: 100px;
+			width: 99.5%;
+			/*background-color: grey;*/
+			margin: 10px 0 0 0;
+			border: 2px solid #216ed0;
+			display: flex;
+		}
+		.in-total1
+		{
+			height: 100px;
+			width: 70%;
+			/*background-color: yellow;*/
+			border-right: 2px solid #216ed0;
+		}
+		.in-div
+		{
+			height: 33.3px;
+			width: 100%;
+			background-color: #216ed0;
+			border-bottom:2px solid white;
+			color: white;
+			text-indent: 10px;
+			line-height: 33px;
+		}
+		.in-div2
+		{
+			height: 32px;
+			width: 100%;
+			background-color: #216ed0;
+			color: white;
+			text-indent: 10px;
+			line-height: 32px;
+			/*border-bottom:2px solid white;*/
+		}
+		.in-total2
+		{
+			height: 100px;
+			width: 30%;
+			background-color: white;
+
+		}
+		.in-total2 p
+		{
+			margin: 10px 0 0 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="invoice">
+
+	<!-- logo n address detail -->
+	<div class="in-logo-add-container">
+		<div class="in-logo-name">
+			<div class="in-logo-name-img">
+				<img src="img/w1.png"></img>
+			</div>
+			<div class="in-logo-name-name">MiniStore</div>
+			<h1 class="in-invoice">INVOICE</h1>
+			<p class="in-tag-line">Customer Satisfaction Is Our First Priority</p>
+		</div>
+
+		<div class="in-add">
+			<div class="in-address-store">
+				street address:
+				<br/>
+				city, st zip
+				<br/>
+				phone:phone number
+				<br/>
+				fax : fax number
+				<br/>
+				email:
+			</div>
+			<div class="in-add-date">
+				<input type="date" name="date">
+				invoice no.<br/>
+				For<br/>
+			</div>
+		</div>
+	</div>
+
+	<!-- logo n address detail close -->
+
+	<!-- bill to start -->
+		<div class="bill">
+			<div class="bill-header">Bill To:</div>
+			<input type="text" name="customer-name" placeholder="Customer Name">
+			<input type="text" name="customer-name" placeholder="Street Address">
+			<input type="text" name="customer-name" placeholder="City, ST zip">
+			<input type="phone" name="customer-name" placeholder="Phone Number">
+		</div>
+	<!-- bill to close -->
+
+	<!-- bill to start -->
+		<table>
+			
+  <tr>
+    <th class="r1-th">Quantity</th>
+    <th class="r2-th">Description</th>
+    <th class="r1-th">Unit Price</th>
+    <th class="r2-th">Amount</th>
+    <th class="r1-th">Tax</th>
+  </tr>
+
+
+  <tr>
+  	<td>
+  		120
+  	</td>
+  	<td>
+  		Item Number 1
+  	</td>
+  	<td>
+  		20000
+  	</td>
+  	<td>
+  		22000
+  	</td>
+  	<td>
+  		1.2%
+  	</td>
+  </tr>
+    
+    <tr>
+  	<td>
+  		60
+  	</td>
+  	<td>
+  		Item Number 2
+  	</td>
+  	<td>
+  		10000
+  	</td>
+  	<td>
+  		22000
+  	</td>
+  	<td>
+  		1.2%
+  	</td>
+  </tr>
+
+<tr>
+  	<td>
+  		40
+  	</td>
+  	<td>
+  		Item Number 3
+  	</td>
+  	<td>
+  		4000
+  	</td>
+  	<td>
+  		22000
+  	</td>
+  	<td>
+  		1.2%
+  	</td>
+  </tr>
+
+
+<tr>
+  	<td>
+  		120
+  	</td>
+  	<td>
+  		Item Number 4
+  	</td>
+  	<td>
+  		6000
+  	</td>
+  	<td>
+  		22000
+  	</td>
+  	<td>
+  		1.2%
+  	</td>
+  </tr>
+
+
+<tr>
+  	<td>
+  		110
+  	</td>
+  	<td>
+  		Item Number 5
+  	</td>
+  	<td>
+  		60000
+  	</td>
+  	<td>
+  		22000
+  	</td>
+  	<td>
+  		1.2%
+  	</td>
+  </tr>
+
+
+<tr>
+  	<td>
+  		70
+  	</td>
+  	<td>
+  		Item Number 6
+  	</td>
+  	<td>
+  		30000
+  	</td>
+  	<td>
+  		22000
+  	</td>
+  	<td>
+  		1.2%
+  	</td>
+  </tr>
+
+  
+</table>
+
+
+
+	<!-- bill to close -->
+
+	<div class="in-total">
+		<div class="in-total1">
+			<div class="in-div">
+				TOTAL AMOUNT
+			</div>
+			<div class="in-div">
+				DISCOUNT AMOUNT
+			</div>
+			<div class="in-div2">
+				FINAL AMOUNT
+			</div>
+	
+		</div>
+
+		<div class="in-total2">
+			<p>RECEIVERS SIGNATURE :</p>
+		</div>
+		
+	</div>
+
+</div>
+</body>
+</html>
